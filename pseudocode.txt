@@ -16,4 +16,10 @@ While Min is not Int OR >59 OR <0 DO
 Min[x] <- min
 WRITE Hour,Min,Accountnum into file
 bookingnum=line of input
-NEXT
+priceTotal = priceStart + PriceEnd + PriceDestination
+While Time is not >10
+  OUTPUT PriceTotal
+If Not
+  PriceFinal = 0.6*priceTotal
+  OUTPUT priceFinal
+END  
