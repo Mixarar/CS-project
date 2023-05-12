@@ -16,3 +16,4 @@ While Min is not Int OR >59 OR <0 DO
 Min[x] <- min
 WRITE Hour,Min,Accountnum into file
 bookingnum=line of input
+NEXT
