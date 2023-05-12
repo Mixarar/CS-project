@@ -1,2 +1,8 @@
 Input Names
 Names[x]<-Name
+Accountnum[x]=hashNames[x]
+Input Hour
+While Hour is not Int OR >23 OR <0
+OUTPUT "ERROR"
+INPUT Hour
+Hour[x] <- Hour
