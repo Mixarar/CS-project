@@ -11,4 +11,3 @@ While Min is not Int OR >59 OR <0 DO
 OUTPUT "ERROR"
 INPUT Min
 Min[x] <- min
-
