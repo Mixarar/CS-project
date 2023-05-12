@@ -6,13 +6,13 @@ OUTPUT the result of reading (T/F)
 WRITE Accountnum in new line
 INPUT Hour
 While Hour is not Int OR >23 OR <0 DO
-OUTPUT "ERROR"
-INPUT Hour
+  OUTPUT "ERROR"
+  INPUT Hour
 Hour[x] <- Hour
 INPUT Min
 While Min is not Int OR >59 OR <0 DO
-OUTPUT "ERROR"
-INPUT Min
+  OUTPUT "ERROR"
+  INPUT Min
 Min[x] <- min
 WRITE Hour,Min,Accountnum into file
 bookingnum=line of input
