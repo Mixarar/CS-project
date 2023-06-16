@@ -23,6 +23,7 @@ def create_account():
     print("Your name is:",name)
     accid = ranint(1,999999)
     print("Your account is now created:",name,"ID:",accid)
+# ---- Booking a journey ----
 def book_journey():
     # ---- Getting the correct hour ----
     print("Please input the hour of your journey in a 24 hour format.")
@@ -35,8 +36,8 @@ def book_journey():
                 time = input_time
                 break
         except:
-            print("Please make sure your input is correct.")
-    print("The hour of your journey is:",hour)
+            print("Please make sure the hour you inputed is correct.")
+    print("The hour of your journey is:",time)
     # ---- Getting the useless minutes ----
     while True:
         try:
@@ -46,16 +47,27 @@ def book_journey():
             else:
                 break
         except:
-            print("Please make sure your input is correct.")
+            print("Please make sure the minutes you inputed is correct.")
     print("The minute of your journey is:",useless_minutes)
     # ---- Inputing the codes of the journey ----
-    for i in range(1,3):
+    for i in range(0,2):
         while True:
             try:
+                part_journey = ""
+                if i == 1:
+                    part_journey = "Home to start station"
+                elif i == 2:
+                    part_journey = "Start station to end station"
+                elif i == 3:
+                    part_journey = "End station to destination"
+                print("Please input the code for the",part_journey)
                 input_code = int(input())
                 if input_code > 5:
                     raise TypeError
                 else:
-                    
+                    codes.insert(input_code-1,i)
                     break
-
+            except:
+                print("Please make sure the code you inputed is correct.")
+    print("The codes you inputed are: "+"C"+str(codes[0])+"-->"+"M"+str(codes[1])+"-->"+"F"+str(codes[2]))
+                    
