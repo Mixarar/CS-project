@@ -7,6 +7,8 @@ useless_minutes = 0
 codes = []
 price = 0
 accounts = []
+bookid = 0
+accid = 0
 # ---- Getting the correct name ----
 def create_account():
     print("Please input your name...")
@@ -70,4 +72,24 @@ def book_journey():
             except:
                 print("Please make sure the code you inputed is correct.")
     print("The codes you inputed are: "+"C"+str(codes[0])+"-->"+"M"+str(codes[1])+"-->"+"F"+str(codes[2]))
-                    
+    bookid = ranint(1,999999)
+    print("Your booking ID: "+str(bookid))
+# ----Def function to save data into file Account.txt----
+def SaveAccountData():
+# Try to find Account.txt and append user's name into file
+    try:
+        UserData = "Account.txt"
+        AccountFile = open(UserData,"a")
+        AccountFile.write(name)
+        AccountFile.write(bookid)
+        AccountFile.write(accid)
+        AccountFile.close()
+# If file not found print error    
+    except:
+        print("File not found {}".format(UserData))
+        
+# ----Def function to save bookings data into files Bookings.txt----
+def BookingsData():
+# Try to find Bookings.txt and append booking codes into file
+
+
