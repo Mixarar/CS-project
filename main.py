@@ -1,5 +1,5 @@
 # ---- Importing libraries ----
-import ranint from random
+import randint from random
 # ---- Setting up variables ----
 name = "NoName"
 time = 0
@@ -23,7 +23,7 @@ def create_account():
         except:
             print("The name should be longer than 2 characters and shorter than 16.")
     print("Your name is:",name)
-    accid = ranint(1,999999)
+    accid = randint(1,999999)
     print("Your account is now created:",name,"ID:",accid)
 # ---- Booking a journey ----
 def book_journey():
@@ -72,7 +72,7 @@ def book_journey():
             except:
                 print("Please make sure the code you inputed is correct.")
     print("The codes you inputed are: "+"C"+str(codes[0])+"-->"+"M"+str(codes[1])+"-->"+"F"+str(codes[2]))
-    bookid = ranint(1,999999)
+    bookid = randint(1,999999)
     print("Your booking ID: "+str(bookid))
 # ----Def function to save data into file Account.txt----
 def SaveAccountData():
