@@ -86,11 +86,17 @@ def SaveAccountData():
         AccountFile.close()
 # If file not found print error    
     except:
-        print("File not found {}".format(UserData))
+        print("{} not found".format(UserData))
         
 # ----Def function to save bookings data into files Bookings.txt----
 def BookingsData():
-    BookingData = "
 # Try to find Bookings.txt and append booking codes into file
+    try:
+        BookingData = "Booking.txt"
+        BookingFile = open(BookingData,"a")
+        BookingFile.write(input_code)
+        BookingFile.close()
+    except:
+        print("{} not found".format(BookingData))
 
 
