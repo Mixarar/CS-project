@@ -90,6 +90,7 @@ def SaveAccountData():
         
 # ----Def function to save bookings data into files Bookings.txt----
 def BookingsData():
+    BookingData = "
 # Try to find Bookings.txt and append booking codes into file
 
 
