@@ -105,7 +105,7 @@ def menu()
     print("3. Book journey (Must be logged in)")
     print("4. Find booked journeys")
     choice = int(input())
-    if isdigit(choice):
+    if choice.isdigit():
         if choice >= 1 and choice <=4:
             if choice == 1:
                 print("Selected 1")
