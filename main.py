@@ -99,4 +99,26 @@ def BookingsData():
     except:
         print("{} not found".format(BookingData))
 
+def menu()
+    print("1. Create account")
+    print("2. Log in account")
+    print("3. Book journey (Must be logged in)")
+    print("4. Find booked journeys")
+    choice = int(input())
+    if isdigit(choice):
+        if choice >= 1 and choice <=4:
+            if choice == 1:
+                print("Selected 1")
+            elif choice == 2:
+                print("Selected 2")
+            elif choice == 3:
+                print("Selected 3")
+            else:
+                print("Selected 4")
+    else:
+        print("Wrong input, please try again.")
+        menu()
 
+
+# Main program thingy code whatever
+menu()
