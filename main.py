@@ -5,7 +5,10 @@ name = "NoName"
 time = 0
 useless_minutes = 0
 codes = []
-price = 0
+priceHome = 0
+priceStart = 0
+priceEnd = 0
+priceTotal = 0
 accounts = []
 bookid = 0
 accid = 0
@@ -118,7 +121,77 @@ def menu()
     else:
         print("Wrong input, please try again.")
         menu()
+# ----Define the subroutine to calculate prices and totalprice----
+def priceHome():
+    if codes[0] >= 1 and codes[0] <= 5:
+        if codes[0] == 1:
+            priceHome = 1.50
+            print("The price of start journey is" + str(priceHome) + "$")
+        elif codes[0] == 2:
+            priceHome = 3
+            print("The price of start journey is" + str(priceHome) + "$")
+        elif codes[0] == 3:
+            priceHome = 4.50
+            print("The price of start journey is" + str(priceHome))
+        elif codes[0] == 4:
+            priceHome = 6
+            print("The price of start journey is" + str(priceHome))
+        elif codes[0] == 5:
+            priceHome = 8
+            print("The price of start journey is" + str(priceHome))
+    else:
+        print("Input cannot be processed, please try again")
+        priceHome()
 
+def priceStart():
+    if codes[1] >= 1 and codes[1] <= 5:
+        if codes[1] == 1:
+            priceStart = 5.75
+            print("The price of start journey is" + str(priceStart) + "$")
+        elif codes[1] == 2:
+            priceStart = 12.5
+            print("The price of start journey is" + str(priceStart) + "$")
+        elif codes[1] == 3:
+            priceStart = 22.25
+            print("The price of start journey is" + str(priceStart) + "$")
+        elif codes[1] == 4:
+            priceStart = 34.5
+            print("The price of start journey is" + str(priceStart) + "$")
+        elif codes[1] == 5:
+            priceStart = 45
+            print("The price of start journey is" + str(priceStart) + "$")
+    else:
+        print("Input cannot be processed, please try again")
+        priceStart()
+
+def priceEnd():
+    if codes[2] >= 1 and codes[2] <= 5:
+        if codes[2] == 1:
+            priceEnd = 1.5
+            print("The price of start journey is" + str(priceEnd) + "$")
+        elif codes[2] == 2:
+            priceEnd = 3
+            print("The price of start journey is" + str(priceEnd) + "$")
+        elif codes[2] == 3:
+            priceEnd = 4.5
+            print("The price of start journey is" + str(priceEnd) + "$")
+        elif codes[2] == 4:
+            priceEnd = 6
+            print("The price of start journey is" + str(priceEnd) + "$")
+        elif codes[2] == 5:
+            priceEnd = 8
+            print("The price of start journey is" + str(priceEnd) + "$")
+    else:
+        print("Input cannot be processed, please try again")
+        priceEnd()
+
+def priceTotal():
+    if time = 10 and minutes = 0:
+        PriceTotal = (priceHome + priceStart + priceEnd) * 0.4
+        print("The total price of your journey is:" + str(priceTotal) + "$")
+    else:
+        PriceTotal = (priceHome + priceStart + priceEnd)
+        print("The total price of your journey is:" + str(priceTotal) + "$")
 
 # Main program thingy code whatever
 menu()
