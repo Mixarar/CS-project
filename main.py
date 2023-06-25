@@ -132,13 +132,13 @@ def priceHome():
             print("The price of start journey is" + str(priceHome) + "$")
         elif codes[0] == 3:
             priceHome = 4.50
-            print("The price of start journey is" + str(priceHome))
+            print("The price of start journey is" + str(priceHome) + "$")
         elif codes[0] == 4:
             priceHome = 6
-            print("The price of start journey is" + str(priceHome))
+            print("The price of start journey is" + str(priceHome) + "$")
         elif codes[0] == 5:
             priceHome = 8
-            print("The price of start journey is" + str(priceHome))
+            print("The price of start journey is" + str(priceHome) + "$")
     else:
         print("Input cannot be processed, please try again")
         priceHome()
