@@ -89,7 +89,7 @@ def SaveAccountData():
         AccountFile.close()
 # If file not found print error    
     except:
-        print("{} not found".format(UserData))
+        print("{} was not found".format(UserData))
         
 # ----Def function to save bookings data into files Bookings.txt----
 def BookingsData():
@@ -97,10 +97,14 @@ def BookingsData():
     try:
         BookingData = "Booking.txt"
         BookingFile = open(BookingData,"a")
-        BookingFile.write(input_code)
+        BookingFile.write("C"+str(codes[0]))
+        BookingFile.write("M"+str(codes[1]))
+        BookingFile.write("F"+str(codes[2]))
+        BookingFile.write("--------------------Day Separation")
         BookingFile.close()
+# Output a message if file isn't found
     except:
-        print("{} not found".format(BookingData))
+        print("{} was not found".format(BookingData))
 
 def menu()
     print("1. Create account")
@@ -192,6 +196,24 @@ def priceTotal():
     else:
         PriceTotal = (priceHome + priceStart + priceEnd)
         print("The total price of your journey is:" + str(priceTotal) + "$")
+
+# ----Defining subroutine to store prices and total prices of each journey----
+def PricesFile():
+# Try to find JourneyPrices.txt and append prices into the file  
+    try:
+        PricesData = "JourneyPrices.txt"
+        PricesFile = open(PricesData,"a")
+        PricesFile.write(priceHome)
+        PricesFile.write(priceStart)
+        PricesFile.write(priceEnd)
+        PricesFile.write(PriceTotal)
+        PricesFile.write("-------------------- Day Separation")
+        PricesFile.close()
+# Output error if file not found
+    except:
+        print("{} was not found".format(PricesData))
+        
+
 
 # Main program thingy code whatever
 menu()
