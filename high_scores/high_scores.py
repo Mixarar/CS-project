@@ -7,7 +7,6 @@ FILE_PATH = os.path.join(BASE_DIR, "HighScore.txt")
 
 # Task 2
 def ReadHighScores():
-    global HighScore
     if not os.path.exists(FILE_PATH):
         return
     try:
