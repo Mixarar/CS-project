@@ -1,5 +1,6 @@
-# OOP
-'''
+# Linked List Implementation
+
+# OOP Implementation
 class Node:
     def __init__(self, data):
         self.data = data
@@ -21,24 +22,17 @@ class LinkedList:
 
     def display(self):
         current = self.head
+        elements = []
         while current:
-            print(current.data, end=" -> ")
+            elements.append(str(current.data))
             current = current.next
-        print("None")
+        print(" -> ".join(elements) + " -> None")
 
-
-ll = LinkedList()
-ll.append(1)
-ll.append(2)
-ll.display()
-'''
-
-# Procedural
-
+# Procedural Implementation
 def create_node(data):
     return {"data": data, "next": None}
 
-def append(head, data):
+def append_procedural(head, data):
     new_node = create_node(data)
     if not head:
         return new_node
@@ -48,15 +42,28 @@ def append(head, data):
     current["next"] = new_node
     return head
 
-def display(head):
+def display_procedural(head):
     current = head
+    elements = []
     while current:
-        print(current["data"], end=" -> ")
+        elements.append(str(current["data"]))
         current = current["next"]
-    print("None")
+    print(" -> ".join(elements) + " -> None")
 
+def run_linkedlist_demo():
+    print("--- Linked List (OOP) ---")
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.display()
 
-head = None
-head = append(head, 1)
-head = append(head, 2)
-display(head)
+    print("\n--- Linked List (Procedural) ---")
+    head = None
+    head = append_procedural(head, 10)
+    head = append_procedural(head, 20)
+    head = append_procedural(head, 30)
+    display_procedural(head)
+
+if __name__ == "__main__":
+    run_linkedlist_demo()

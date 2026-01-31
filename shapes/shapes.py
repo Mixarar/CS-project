@@ -45,12 +45,17 @@ class Hexagon(Shape):
     def area(self):
         return round((3 * sqrt(3) * self.side ** 2) / 2, 1)
 
-shapes = [
-    Square(4),
-    Circle(3),
-    Triangle(4, 5),
-    Hexagon(2)
-]
+def run_shapes_demo():
+    print("--- Shapes Area Calculation ---")
+    shapes_list = [
+        Square(4),
+        Circle(3),
+        Triangle(4, 5),
+        Hexagon(2)
+    ]
 
-for shape in shapes:
-    print(f"The area of the {shape.__class__.__name__} is {shape.calculate_area()}")
+    for shape in shapes_list:
+        print(f"The area of the {shape.__class__.__name__} is {shape.calculate_area()}")
+
+if __name__ == "__main__":
+    run_shapes_demo()
