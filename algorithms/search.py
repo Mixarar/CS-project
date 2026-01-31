@@ -1,5 +1,6 @@
 import os
 
+
 def search(search_item, search_array):
     id_item = 0
     for item in search_array:
@@ -11,6 +12,7 @@ def search(search_item, search_array):
                 return id_item, item, True
         id_item += 1
     return False
+
 
 def run_search():
     # Get the directory of the current script
@@ -40,6 +42,7 @@ def run_search():
             print(f"Item {item_s} not found!")
     except FileNotFoundError:
         print(f"Error: {data_file} not found.")
+
 
 if __name__ == "__main__":
     run_search()

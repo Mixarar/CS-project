@@ -6,6 +6,8 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 FILE_PATH = os.path.join(BASE_DIR, "HighScore.txt")
 
 # Task 2
+
+
 def ReadHighScores():
     if not os.path.exists(FILE_PATH):
         return
@@ -21,6 +23,8 @@ def ReadHighScores():
         print(f"Error reading high scores: {e}")
 
 # Task 3
+
+
 def OutputHighScores():
     print("\n--- High Scores ---")
     for i in range(len(HighScore)):
@@ -30,11 +34,14 @@ def OutputHighScores():
             print(f"{i+1}. <Empty>")
 
 # Task 5
+
+
 def GetPlayerInput():
     while True:
         playername = input("Please input the player name (3 characters): ")
         if len(playername) != 3:
-            print("The inputted player name must be exactly 3 characters, please try again.")
+            print(
+                "The inputted player name must be exactly 3 characters, please try again.")
             continue
         try:
             score = int(input("Please input the player score: "))
@@ -46,6 +53,8 @@ def GetPlayerInput():
             print("Invalid score. Please enter a number.")
 
 # Task 6
+
+
 def calculate_top(playername, score):
     global HighScore
     # Add new score to the list
@@ -63,6 +72,7 @@ def calculate_top(playername, score):
             break
     return found
 
+
 def SaveHighScores():
     try:
         with open(FILE_PATH, "w") as f:
@@ -71,6 +81,7 @@ def SaveHighScores():
                 f.write(f"{score}\n")
     except Exception as e:
         print(f"Error saving high scores: {e}")
+
 
 def run_high_scores():
     ReadHighScores()
@@ -82,6 +93,7 @@ def run_high_scores():
         print(f"Sorry {playername}, you didn't make it to the Top 10.")
     OutputHighScores()
     SaveHighScores()
+
 
 if __name__ == "__main__":
     run_high_scores()

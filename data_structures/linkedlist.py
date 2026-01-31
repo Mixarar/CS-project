@@ -6,6 +6,7 @@ class Node:
         self.data = data
         self.next = None
 
+
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -29,8 +30,11 @@ class LinkedList:
         print(" -> ".join(elements) + " -> None")
 
 # Procedural Implementation
+
+
 def create_node(data):
     return {"data": data, "next": None}
+
 
 def append_procedural(head, data):
     new_node = create_node(data)
@@ -42,6 +46,7 @@ def append_procedural(head, data):
     current["next"] = new_node
     return head
 
+
 def display_procedural(head):
     current = head
     elements = []
@@ -49,6 +54,7 @@ def display_procedural(head):
         elements.append(str(current["data"]))
         current = current["next"]
     print(" -> ".join(elements) + " -> None")
+
 
 def run_linkedlist_demo():
     print("--- Linked List (OOP) ---")
@@ -64,6 +70,7 @@ def run_linkedlist_demo():
     head = append_procedural(head, 20)
     head = append_procedural(head, 30)
     display_procedural(head)
+
 
 if __name__ == "__main__":
     run_linkedlist_demo()

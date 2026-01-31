@@ -13,11 +13,13 @@ def sort(array):
                     break
     return arr
 
+
 def run_sorting():
     unsorted = [1, 3, 7, 8, 23, 0, 4, 5, 6, 2, 12]
     print(f"Unsorted list: {unsorted}")
     sorted_list = sort(unsorted)
     print(f"Sorted list:   {sorted_list}")
+
 
 if __name__ == "__main__":
     run_sorting()

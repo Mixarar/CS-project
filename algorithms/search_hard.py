@@ -1,5 +1,6 @@
 import os
 
+
 def search(search_item, search_array):
     while True:
         array_length = len(search_array)
@@ -16,6 +17,7 @@ def search(search_item, search_array):
         else:
             search_array = search_array[0:midpoint]
 
+
 def sort(sort_array):
     array = list(sort_array)
     changed = True
@@ -28,6 +30,7 @@ def sort(sort_array):
                 array[i + 1] = temp
                 changed = True
     return array
+
 
 def run_search_hard():
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -46,7 +49,8 @@ def run_search_hard():
         print("Sorted array:", sorted_array)
 
         try:
-            item_s = int(input("Enter a number to search for (Binary Search): "))
+            item_s = int(
+                input("Enter a number to search for (Binary Search): "))
         except ValueError:
             print("Invalid input. Searching for 11.")
             item_s = 11
@@ -59,6 +63,7 @@ def run_search_hard():
         print(f"Error: {data_file} not found.")
     except Exception as e:
         print(f"An error occurred: {e}")
+
 
 if __name__ == "__main__":
     run_search_hard()
