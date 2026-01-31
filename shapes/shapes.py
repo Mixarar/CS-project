@@ -1,5 +1,6 @@
 from math import pi, sqrt
 
+
 class Shape():
     def __init__(self):
         self.area_value = 0
@@ -7,10 +8,11 @@ class Shape():
     def calculate_area(self):
         self.area_value = self.area()
         return self.area_value
-    
+
     def area(self):
         raise NotImplementedError("Not implemented!")
-    
+
+
 class Square(Shape):
     def __init__(self, side):
         super().__init__()
@@ -28,6 +30,7 @@ class Circle(Shape):
     def area(self):
         return round(pi * self.radius ** 2, 1)
 
+
 class Triangle(Shape):
     def __init__(self, base, height):
         super().__init__()
@@ -37,6 +40,7 @@ class Triangle(Shape):
     def area(self):
         return round(0.5 * self.base * self.height, 1)
 
+
 class Hexagon(Shape):
     def __init__(self, side):
         super().__init__()
@@ -45,12 +49,20 @@ class Hexagon(Shape):
     def area(self):
         return round((3 * sqrt(3) * self.side ** 2) / 2, 1)
 
-shapes = [
-    Square(4),
-    Circle(3),
-    Triangle(4, 5),
-    Hexagon(2)
-]
 
-for shape in shapes:
-    print(f"The area of the {shape.__class__.__name__} is {shape.calculate_area()}")
+def run_shapes_demo():
+    print("--- Shapes Area Calculation ---")
+    shapes_list = [
+        Square(4),
+        Circle(3),
+        Triangle(4, 5),
+        Hexagon(2)
+    ]
+
+    for shape in shapes_list:
+        print(
+            f"The area of the {shape.__class__.__name__} is {shape.calculate_area()}")
+
+
+if __name__ == "__main__":
+    run_shapes_demo()
